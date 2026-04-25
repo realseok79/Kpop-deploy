@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-POP | Deep Dive into the Global Phenomenon</title>
+    <meta name="description" content="Discover the history, characteristics, and global impact of K-POP based on comprehensive research.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    animation: {
+                        'blob': 'blob 20s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(40px, -60px) scale(1.1)' },
+                            '66%': { transform: 'translate(-30px, 30px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass {
+                @apply bg-white/60 backdrop-blur-[40px] border border-white/80 shadow-[0_15px_45px_-10px_rgba(0,0,0,0.1)];
+            }
+            .glass-thick {
+                @apply bg-white/80 backdrop-blur-[80px] border-2 border-white/90 shadow-[0_30px_100px_-20px_rgba(0,0,0,0.15)];
+            }
+            .text-gradient {
+                @apply bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-500;
+            }
+            .reveal {
+                @apply opacity-0 translate-y-10 transition-all duration-1000 ease-out;
+            }
+            .reveal.active {
+                @apply opacity-100 translate-y-0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans selection:bg-blue-200">
+    <!-- Animated Background Blobs -->
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-blue-200/60 rounded-full blur-[120px] animate-blob"></div>
+        <div class="absolute top-[20%] right-[-10%] w-[50%] h-[50%] bg-purple-200/60 rounded-full blur-[120px] animate-blob" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-[-10%] left-[10%] w-[55%] h-[55%] bg-pink-200/60 rounded-full blur-[120px] animate-blob" style="animation-delay: 4s;"></div>
+        <div class="absolute top-[40%] right-[30%] w-[40%] h-[40%] bg-cyan-200/50 rounded-full blur-[120px] animate-blob" style="animation-delay: 6s;"></div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div id="progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 z-50 transition-all duration-150" style="width: 0%"></div>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-[90vh] flex items-center justify-center px-6 pt-20">
+        <div class="container mx-auto z-10 text-center reveal active">
+            <!-- South Korean Flag -->
+            <div class="flex justify-center mb-10">
+                <div class="glass-thick p-2 rounded-2xl shadow-2xl hover:scale-110 transition-transform">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" alt="Flag of South Korea" class="w-16 h-auto rounded-lg">
+                </div>
+            </div>
+            
+            <span class="inline-block px-5 py-2 mb-6 text-xs font-black tracking-[0.2em] uppercase bg-white/80 border border-white rounded-full text-slate-600 shadow-sm">
+                The Heritage of a Nation
+            </span>
+            <h1 class="text-7xl md:text-9xl font-black mb-8 tracking-tighter leading-none">
+                <span class="text-gradient">K-POP</span><br/>
+                <span class="text-slate-300">EVOLVED.</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-slate-500 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+                From 19th-century folk songs to a multi-billion dollar global industry. Explore the journey of a cultural masterpiece.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a href="#history" class="px-10 py-5 bg-slate-900 text-white font-bold rounded-[2rem] hover:bg-slate-800 transition-all shadow-2xl hover:scale-105">
+                    History & Heritage
+                </a>
+                <a href="#about" class="glass-thick px-10 py-5 font-bold rounded-[2rem] hover:bg-white/90 transition-all">
+                    Key Features
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10 space-y-40 pb-40">
+        <!-- History Section -->
+        <section id="history" class="container mx-auto px-6 reveal">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="text-5xl md:text-7xl font-black mb-10 tracking-tighter">Heritage & <br/><span class="text-blue-600/60">Evolution.</span></h2>
+                    <div class="space-y-8 text-slate-500 text-lg leading-relaxed font-light">
+                        <p>
+                            K-pop's origins date back to 1885 with <span class="font-bold text-slate-800">changga</span>, Western folk songs with Korean lyrics. Its modern era began in 1992 with <span class="font-bold text-slate-800">Seo Taiji and Boys</span>, who revolutionized the industry by integrating American hip-hop and R&B.
+                        </p>
+                        <p>
+                            The late 1990s saw the birth of the first idol groups like <span class="font-bold text-slate-800">H.O.T.</span>, established by pioneering agencies like SM, YG, and JYP. This era defined the "idol formula" of synchronized dancing and high-end production.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="glass-thick p-8 rounded-[3rem] text-center">
+                        <div class="text-4xl font-black text-slate-900 mb-2">1885</div>
+                        <div class="text-slate-500 text-xs uppercase tracking-widest font-bold italic">Changga Era</div>
+                    </div>
+                    <div class="glass-thick p-8 rounded-[3rem] text-center mt-10">
+                        <div class="text-4xl font-black text-slate-900 mb-2">1992</div>
+                        <div class="text-slate-500 text-xs uppercase tracking-widest font-bold italic">Seo Taiji</div>
+                    </div>
+                    <div class="glass-thick p-8 rounded-[3rem] text-center">
+                        <div class="text-4xl font-black text-slate-900 mb-2">1996</div>
+                        <div class="text-slate-500 text-xs uppercase tracking-widest font-bold italic">H.O.T. Debut</div>
+                    </div>
+                    <div class="glass-thick p-8 rounded-[3rem] text-center mt-10">
+                        <div class="text-4xl font-black text-slate-900 mb-2">2010s</div>
+                        <div class="text-slate-500 text-xs uppercase tracking-widest font-bold italic">Global Wave</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Characteristics Section -->
+        <section id="about" class="container mx-auto px-6 reveal">
+            <div class="max-w-4xl mb-20 text-center mx-auto">
+                <h2 class="text-5xl md:text-7xl font-black mb-8 tracking-tighter">The Idol Ecosystem.</h2>
+                <p class="text-xl text-slate-500 leading-relaxed font-light">
+                    What makes K-pop unique is its systematic approach to talent, production, and global communication.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass-thick p-10 rounded-[3.5rem] group hover:bg-white transition-all">
+                    <h3 class="text-2xl font-black mb-6">Hybrid Genre</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">A seamless fusion of Western Pop, Hip-Hop, R&B, EDM, and Rock with unique Korean cultural identity.</p>
+                </div>
+                <div class="glass-thick p-10 rounded-[3.5rem] group hover:bg-white transition-all">
+                    <h3 class="text-2xl font-black mb-6">Intensive Training</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Trainees undergo years of rigorous education in vocals, dance, and foreign languages before debut.</p>
+                </div>
+                <div class="glass-thick p-10 rounded-[3.5rem] group hover:bg-white transition-all">
+                    <h3 class="text-2xl font-black mb-6">Audiovisual</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Defining global trends through state-of-the-art music videos, choreography, and avant-garde fashion.</p>
+                </div>
+                <div class="glass-thick p-10 rounded-[3.5rem] group hover:bg-white transition-all">
+                    <h3 class="text-2xl font-black mb-6">Digital First</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Leveraging social media and YouTube to build the most active and dedicated global fandoms.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artist Showcase -->
+        <section id="artists" class="container mx-auto px-6 reveal">
+            <div class="mb-20 text-center">
+                <h2 class="text-5xl md:text-7xl font-black tracking-tighter">Global Ambassadors.</h2>
+                <p class="text-slate-400 mt-4 text-xl font-light">The artists at the forefront of the Hallyu wave.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- BTS -->
+                <div class="glass-thick p-12 rounded-[4.5rem] group hover:translate-y-[-10px] transition-all duration-500">
+                    <div class="h-56 bg-blue-100 rounded-[3.5rem] mb-10 flex items-center justify-center text-blue-500 font-black text-3xl group-hover:bg-blue-600 group-hover:text-white transition-all shadow-inner">BTS</div>
+                    <h3 class="text-3xl font-black mb-4 text-center">BTS</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed text-center">Global superstars who achieved unprecedented success on the Billboard charts.</p>
+                </div>
+                <!-- BLACKPINK -->
+                <div class="glass-thick p-12 rounded-[4.5rem] group hover:translate-y-[-10px] transition-all duration-500 lg:mt-16">
+                    <div class="h-56 bg-pink-100 rounded-[3.5rem] mb-10 flex items-center justify-center text-pink-500 font-black text-3xl group-hover:bg-pink-600 group-hover:text-white transition-all shadow-inner">BP</div>
+                    <h3 class="text-3xl font-black mb-4 text-center">BLACKPINK</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed text-center">Dominating fashion and music as the world's most influential girl group.</p>
+                </div>
+                <!-- NewJeans -->
+                <div class="glass-thick p-12 rounded-[4.5rem] group hover:translate-y-[-10px] transition-all duration-500">
+                    <div class="h-56 bg-cyan-100 rounded-[3.5rem] mb-10 flex items-center justify-center text-cyan-500 font-black text-3xl group-hover:bg-cyan-600 group-hover:text-white transition-all shadow-inner">NJ</div>
+                    <h3 class="text-3xl font-black mb-4 text-center">NewJeans</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed text-center">Bringing a fresh, sophisticated retro-sound to the next generation of listeners.</p>
+                </div>
+                <!-- Stray Kids -->
+                <div class="glass-thick p-12 rounded-[4.5rem] group hover:translate-y-[-10px] transition-all duration-500 lg:mt-16">
+                    <div class="h-56 bg-indigo-100 rounded-[3.5rem] mb-10 flex items-center justify-center text-indigo-500 font-black text-3xl group-hover:bg-indigo-600 group-hover:text-white transition-all shadow-inner">SKZ</div>
+                    <h3 class="text-3xl font-black mb-4 text-center">Stray Kids</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed text-center">Known for their self-produced explosive energy and sonic innovation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section class="container mx-auto px-6 reveal">
+            <div class="glass-thick p-16 md:p-32 rounded-[6rem] border-white text-center relative overflow-hidden group">
+                <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-100/40 via-white/50 to-pink-100/40 -z-10 group-hover:scale-110 transition-transform duration-1000"></div>
+                <h2 class="text-5xl md:text-8xl font-black mb-16 tracking-tighter">THE HALLYU WAVE.</h2>
+                <p class="text-xl md:text-2xl text-slate-500 max-w-3xl mx-auto mb-20 font-light leading-relaxed">
+                    K-pop has transformed from a domestic music scene into a global powerhouse, boosting South Korea's soft power and tourism through digital dominance and unparalleled fan engagement.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-16 text-center">
+                    <div>
+                        <div class="text-6xl font-black text-slate-900 mb-4">10B+</div>
+                        <div class="text-slate-500 text-sm font-black uppercase tracking-[0.2em]">Economy</div>
+                    </div>
+                    <div>
+                        <div class="text-6xl font-black text-slate-900 mb-4">150M+</div>
+                        <div class="text-slate-500 text-sm font-black uppercase tracking-[0.2em]">Fandom</div>
+                    </div>
+                    <div>
+                        <div class="text-6xl font-black text-slate-900 mb-4">190+</div>
+                        <div class="text-slate-500 text-sm font-black uppercase tracking-[0.2em]">Countries</div>
+                    </div>
+                    <div>
+                        <div class="text-6xl font-black text-slate-900 mb-4">Top 1</div>
+                        <div class="text-slate-500 text-sm font-black uppercase tracking-[0.2em]">Digital</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-32 bg-white/40 backdrop-blur-3xl border-t-2 border-white text-center">
+        <div class="text-4xl font-black tracking-tighter mb-10">K-POP WAVE</div>
+        <p class="text-slate-500 text-sm font-black uppercase tracking-[0.3em]">&copy; 2026 The Wikipedia Enriched Edition. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress').style.width = scrolled + "%";
+        });
+
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        revealElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
